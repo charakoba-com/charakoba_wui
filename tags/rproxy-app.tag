@@ -5,6 +5,7 @@
   </section>
 
   <script>
+   this.live = 'DEAD'
    var self = this
    superagent.get(config.baseuri + '/rproxy/')
              .end(function(err, res) {

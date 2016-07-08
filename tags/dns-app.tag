@@ -5,6 +5,7 @@
   </section>
 
   <script>
+   this.live = 'DEAD'
    var self = this
    superagent.get(config.baseuri + '/dns/')
           .end(function(err, res) {
