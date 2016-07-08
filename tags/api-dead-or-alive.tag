@@ -3,6 +3,7 @@
 
   <style scoped>
    span {
+     display: inline-block;
      color: white;
      background: Crimson;
      font-weight: bold;
