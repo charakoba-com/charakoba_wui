@@ -7,7 +7,7 @@
   <script>
    this.live = 'DEAD'
    var self = this
-   superagent.get(config.baseuri + '/rproxy/')
+   superagent.get(config.apibaseuri + '/rproxy/')
              .end(function(err, res) {
                self.live = JSON.parse(res.status)
                riot.update()

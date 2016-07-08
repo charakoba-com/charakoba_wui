@@ -7,7 +7,7 @@
   <script>
    this.live = 'DEAD'
    var self = this
-   superagent.get(config.baseuri + '/dns/')
+   superagent.get(config.apibaseuri + '/dns/')
           .end(function(err, res) {
             self.live = JSON.parse(res.status)
             riot.update()
