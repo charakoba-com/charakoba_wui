@@ -1,0 +1,17 @@
+{
+  "name": "charakoba_wui",
+  "homepage": "https://github.com/nasa9084/charakoba_wui",
+  "authors": [
+    "nasa9084 <nasa9084@live.jp>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
