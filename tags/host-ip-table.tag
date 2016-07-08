@@ -15,8 +15,12 @@
   </table>
 
   <style scoped>
-   table {
+   thead tr {
+     font-weight: bold;
      border: 1px solid black;
+   }
+   tbody tr:nth-child(even) {
+     background: lightgray;
    }
   </style>
 </host-ip-table>
