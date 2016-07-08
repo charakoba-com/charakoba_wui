@@ -1,7 +1,7 @@
 <rproxy-app>
   <h2>REVERSE PROXY</h2>
   <section>
-    { live }
+    <api-dead-or-alive live={ live }></api-dead-or-alive>
   </section>
 
   <script>

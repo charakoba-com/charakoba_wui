@@ -1,7 +1,7 @@
 <dns-app>
   <h2>DNS</h2>
   <section>
-    { live }
+    <api-dead-or-alive live={ live }></api-dead-or-alive>
   </section>
 
   <script>
