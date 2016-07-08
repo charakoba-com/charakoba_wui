@@ -13,11 +13,15 @@
     <script src="tags/wui-header.tag" type="riot/tag"></script>
     <script src="tags/index-app.tag" type="riot/tag"></script>
     <script src="tags/dns-app.tag" type="riot/tag"></script>
+    <script src="tags/rproxy-app.tag" type="riot/tag"></script>
     <script>
      riot.mount('wui-header');
      riot.route(function(app) {
        if(app=="dns"){
          riot.mount('wui-app', 'dns-app');
+         riot.update();
+       }else if(app=="rproxy"){
+         riot.mount('wui-app', 'rproxy-app');
          riot.update();
        }else{
          riot.mount('wui-app', 'index-app');
