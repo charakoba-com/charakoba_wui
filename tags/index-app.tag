@@ -1,3 +1,3 @@
 <index-app>
-  <h2>INDEX</h2>
+  <wui-app-header apptitle="INDEX"></wui-app-header>
 </index-app>

@@ -12,6 +12,7 @@
     <wui-header></wui-header>
     <wui-app></wui-app>
     <script src="tags/wui-header.tag" type="riot/tag"></script>
+    <script src="tags/wui-app-header.tag" type="riot/tag"></script>
     <script src="tags/index-app.tag" type="riot/tag"></script>
     <script src="tags/api-dead-or-alive.tag" type="riot/tag"></script>
     <script src="tags/host-ip-table.tag" type="riot/tag"></script>
@@ -27,6 +28,7 @@
        }else{
          riot.mount('wui-app', 'index-app');
        }
+       riot.mount('wui-app-header');
        riot.update();
      });
      riot.route.start(true);

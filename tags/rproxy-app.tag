@@ -1,5 +1,5 @@
 <rproxy-app>
-  <h2>REVERSE PROXY</h2>
+  <wui-app-header apptitle="REVERSE PROXY" />
   <section>
     <api-dead-or-alive live={ live }></api-dead-or-alive>
   </section>

@@ -1,5 +1,5 @@
 <dns-app>
-  <h2>DNS</h2>
+  <wui-app-header apptitle="DNS" />
   <section>
     <api-dead-or-alive live={ live }></api-dead-or-alive>
   </section>
