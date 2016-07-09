@@ -22,14 +22,12 @@
      riot.route(function(app) {
        if(app=="dns"){
          riot.mount('wui-app', 'dns-app');
-         riot.update();
        }else if(app=="rproxy"){
          riot.mount('wui-app', 'rproxy-app');
-         riot.update();
        }else{
          riot.mount('wui-app', 'index-app');
-         riot.update();
        }
+       riot.update();
      });
      riot.route.start(true);
     </script>
