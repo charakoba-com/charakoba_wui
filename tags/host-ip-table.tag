@@ -52,7 +52,6 @@
        riot.mount("#row"+edit, "dns-edit-row", {i: edit, body: self.opts.body[edit]});
        riot.update();
      }else{
-       dns-edit-row.unmount();
      }
    });
    riot.route.start(true);
