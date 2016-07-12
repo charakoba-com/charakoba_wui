@@ -1,0 +1,5 @@
+#+TITLE: charakoba.com 統合管理web UI
+
+* 使途
+charakoba.comに関する統合web UIです。
+内部用に作成しています。
