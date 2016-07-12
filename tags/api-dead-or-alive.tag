@@ -14,5 +14,4 @@
      background: LimeGreen;
    }
   </style>
-
 </api-dead-or-alive>

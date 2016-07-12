@@ -11,12 +11,21 @@
   <body>
     <wui-header></wui-header>
     <wui-app></wui-app>
+
+    <style>
+     wui-app {
+       height: 100%;
+     }
+    </style>
+
     <script src="tags/wui-header.tag" type="riot/tag"></script>
     <script src="tags/wui-app-header.tag" type="riot/tag"></script>
     <script src="tags/index-app.tag" type="riot/tag"></script>
     <script src="tags/api-dead-or-alive.tag" type="riot/tag"></script>
     <script src="tags/host-ip-table.tag" type="riot/tag"></script>
     <script src="tags/dns-app.tag" type="riot/tag"></script>
+    <script src="tags/wui-app-sidebar.tag" type="riot/tag"></script>
+    <script src="tags/dns-edit-row.tag" type="riot/tag"></script>
     <script src="tags/rproxy-app.tag" type="riot/tag"></script>
     <script>
      riot.mount('wui-header');

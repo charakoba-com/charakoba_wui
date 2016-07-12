@@ -1,8 +1,8 @@
 <rproxy-app>
   <wui-app-header apptitle="REVERSE PROXY" />
-  <section>
-    <api-dead-or-alive live={ live }></api-dead-or-alive>
-  </section>
+  <main>
+    <wui-app-sidebar app="dns" live={live}></wui-app-sidebar>
+  </main>
   <section>
     <host-ip-table body={ body }></host-ip-table>
   </section>
