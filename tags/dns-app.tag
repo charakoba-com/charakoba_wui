@@ -29,7 +29,7 @@
    riot.route(function(app, subapp){
      riot.mount('dns-subapp', 'host-ip-table', {body: self.body});
      riot.update();
-   })
+   });
    riot.route.start(true)
   </script>
 </dns-app>

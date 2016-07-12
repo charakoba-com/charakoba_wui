@@ -11,19 +11,15 @@
    saveHandler(e) {
      new_host = self.host.value;
      new_ipaddress = self.ipaddress.value;
-     if(host!=new_host){
-       superagent.post(config.apibaseuri + '/dns/hosts/')
-                 .set("Content-Type", "application/x-www-form-urlencoded")
-                 .send({host: host, new_host: new_host})
-                 .end();
-     }
-     if(ipaddress!=new_ipaddress){
-       superagent.post(config.apibaseuri + '/dns/ipaddress/')
-                 .set("Content-Type", "application/x-www-form-urlencoded")
-                 .send(JSON.stringify({host: new_host, new_ipaddress: new_ipaddress}))
-                 .end();
-     }
-     return true;
+     superagent.post(config.apibaseuri + '/dns/hosts/')
+               .set("Content-Type", "application/x-www-form-urlencoded")
+               .send({host: host, new_host: new_host})
+               .end(function(){
+                 superagent.post(config.apibaseuri + '/dns/ipaddress/')
+                           .set("Content-Type", "application/x-www-form-urlencoded")
+                           .send({host: new_host, new_ipaddress: new_ipaddress})
+                           .end(function(){self.unmount()});
+               });
    }
   </script>
 </dns-edit-row>
