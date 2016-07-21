@@ -1,6 +1,6 @@
 <wui-header>
   <header>
-    <h1>charakoba</h1>
+    <h1><a href="#">charakoba</a></h1>
     <nav>
       <ul>
         <li><a href="#">INDEX</a></li>
@@ -21,6 +21,10 @@
      align-items: center;
      padding-left: 1em;
      color: Lavender;
+   }
+   header h1 a {
+     color: Lavender;
+     text-decoration: none;
    }
    header nav {
      flex: 1;

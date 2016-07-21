@@ -10,7 +10,7 @@
   </head>
   <body>
     <wui-header></wui-header>
-    <wui-app></wui-app>
+    <app apptitle="{ apptitle }"></app>
 
     <style>
      wui-app {
@@ -19,25 +19,17 @@
     </style>
 
     <script src="tags/wui-header.tag" type="riot/tag"></script>
+    <script src="tags/app.tag" type="riot/tag"></script>
     <script src="tags/wui-app-header.tag" type="riot/tag"></script>
-    <script src="tags/index-app.tag" type="riot/tag"></script>
     <script src="tags/api-dead-or-alive.tag" type="riot/tag"></script>
-    <script src="tags/host-ip-table.tag" type="riot/tag"></script>
-    <script src="tags/dns-app.tag" type="riot/tag"></script>
     <script src="tags/wui-app-sidebar.tag" type="riot/tag"></script>
-    <script src="tags/dns-edit-row.tag" type="riot/tag"></script>
-    <script src="tags/rproxy-app.tag" type="riot/tag"></script>
+    <script src="tags/editable-table.tag" type="riot/tag"></script>
     <script>
      riot.mount('wui-header');
+     var apptitle = 'top';
+     riot.mount('app');
      riot.route(function(app) {
-       if(app=="dns"){
-         riot.mount('wui-app', 'dns-app');
-       }else if(app=="rproxy"){
-         riot.mount('wui-app', 'rproxy-app');
-       }else{
-         riot.mount('wui-app', 'index-app');
-       }
-       riot.mount('wui-app-header');
+       apptitle = app || 'top';
        riot.update();
      });
      riot.route.start(true);

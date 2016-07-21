@@ -1,17 +1,20 @@
 <wui-app-sidebar>
   <section class="status">
-    API STATUS: <api-dead-or-alive live={ opts.live }/>
+    API STATUS: <api-dead-or-alive live={ opts.live || 'DEAD' }/>
   </section>
   <hr/>
   <section>
     <ul>
-      <li><a href="#{ opts.app }">{ opts.app.toUpperCase() } TOP</a></li>
+      <li><a href="#{ opts.apptitle }">{ opts.apptitle.toUpperCase() } TOP</a></li>
+      <ul class="nested_list">
+        <li each={ menuitem in menulist }><a href="#{ opts.apptitle }/{ menuitem }">{ menuitem }</a></li>
+      </ul>
     </ul>
   </section>
 
   <style scoped>
    :scope {
-     min-height: 120%;
+     height: 120%;
      flex: 1;
      background: AliceBlue;
      padding: 1em;
@@ -35,6 +38,10 @@
    li a {
      text-decoration: none;
      color: SteelBlue;
+   }
+   ul.nested_list li a:before {
+     content: "+";
+     padding-left: .5em;
    }
   </style>
 </wui-app-sidebar>
